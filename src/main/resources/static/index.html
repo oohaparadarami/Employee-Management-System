@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Employee</title>
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    <form id="employeeForm">
+        <label>Name :</label><input type="text" id="name" placeholder="enter your name"><br>
+        <label>Email</label><input type="mail" id="email" placeholder="enter your email"><br>
+        <label>Department</label><input type="text" id="department" placeholder="enter your department"><br>
+        <button type="submit" id="employeeformbutton">SAVE EMPLOYEE</button>
+        <script src="script.js"></script>
+    </form>
+    <p id="message"></p>
+    <input type="text" id="searchInput" placeholder="Search Employee by name" onkeyup="searchEmployees()"> 
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTableBody">
+        </tbody>
+    </table>
+    <div id="pagination">
+        <button id="prevBtn" onclick="previousPage()">Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextBtn" onclick="nextPage()">Next</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
